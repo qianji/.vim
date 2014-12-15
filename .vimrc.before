@@ -1,0 +1,41 @@
+"" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
+
+"" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Terminal - open terminal
+nnoremap <leader>O :call OpenTerminal()<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" F-Keys
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F6> :set ignorecase!<CR>
+nnoremap <F7> :NERDTreeToggle<CR>
+nnoremap <F8> :set wrap!<CR>:set lbr<CR>
+nnoremap <F9> :set hlsearch! hlsearch?<CR>
+nnoremap <F10> :set cursorline! cursorline?<CR>
+nnoremap <F11> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F7> :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-w>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
